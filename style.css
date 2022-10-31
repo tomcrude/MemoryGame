@@ -1,0 +1,109 @@
+body{
+    overflow: hidden;
+    font-family: sans-serif;
+    letter-spacing: 4px;
+    background: rgb(241, 241, 241) !important;
+}
+button:hover{
+    background: rgb(255, 255, 255);
+}
+.inactive{
+    transform: translateY(-1200px);
+}
+.start{
+    height: 80px;
+    font-size: 40px;
+    border-radius: 4%;
+    margin: auto;
+    margin: auto;
+}
+.active{
+    transform: translateY(-1px);
+    position: absolute;
+    animation: sta 2s;
+}
+.game{
+    width: 100%;
+    height: 100%;
+    background: rgb(253, 253, 253);
+}
+.number{
+    font-size: 200px;
+}
+.number-0{
+   width: 300px;
+   margin: auto;
+   border: solid black 2px;
+   background: rgb(255, 255, 255);
+}
+.lost{
+    width: 100%;
+    height: 100%;
+    background: rgb(230, 230, 230);
+}
+.lost-title{
+    font-size: 60px;
+    font-weight: 300;
+}
+.count{
+    color: rgb(0, 114, 0);
+}   
+.inactive-2{
+    visibility: hidden;
+}
+input{
+    height: 40px;
+}
+.number-style{
+    color: rgb(0, 0, 0);
+    animation: sta2 3s;
+}
+.count3{
+    font-size: 50px;
+}
+
+.uni{
+    transform: translateY(-65px);
+}
+
+
+
+
+@media screen and (min-width: 800px){
+    .mains{
+    top: 0;
+    left: 0%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    }
+    .titl{
+        text-decoration: underline 2px;
+    }
+    .aut{
+        margin-left: 2%; 
+        margin-right: 10%; 
+    }
+    .count3{
+        font-size: 70px;
+    }
+}
+
+
+@keyframes sta {
+    0% {
+        transform: translateY(-1000px);
+    }
+    50% {
+        transform: translateY(1px);
+    }
+}
+
+@keyframes sta2 {
+    0% {
+        color: rgba(0, 255, 98, 0.63);
+    }
+    50% {
+        color: rgb(0, 0, 0);
+    }
+}

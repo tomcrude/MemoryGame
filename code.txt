@@ -1,0 +1,50 @@
+main[1].classList.replace("inactive","active")
+    var i = 3;
+    var x = 1;
+    var j = 0;
+    var code = ""
+    
+    alert("hola")
+
+    for (j; j < 2; j++)
+   { var Star = setInterval(()=>{
+    j = 0;
+    i = i - 1;
+    count.innerHTML = i
+    if (i == 0) {clearInterval(Star)
+        counter.classList.add("inactive-2")
+    }
+}, 300)
+
+var Game = setInterval(()=>{
+    var random = Math.random()*9
+    var round = Math.round(random)
+    
+     let ani = setInterval(()=>{
+        number.classList.add("number-style")
+    },1000)
+    
+    var string = round.toString()
+    code = code + string
+
+    number.innerHTML = Math.round(random)
+    i = i + 0.5;
+    if (i == x) {clearInterval(Game)
+        counter.classList.add("inactive-2")
+        insert.classList.remove("inactive-2")
+        
+    }}, 900)
+
+    buton.addEventListener("click", (e)=>{
+        e.preventDefault()
+        if (insert.value == code){
+            x = x +1
+            j = 0;
+            alert("4")
+        } else if (insert.value != code) {
+            main[2].classList.replace("inactive","active")
+            loose.addEventListener("click", ()=>{location. reload()})
+        }
+
+    })
+}}
