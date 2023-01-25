@@ -11,15 +11,16 @@ const insert = document.querySelector(".insert")
 const buton = document.querySelector(".buton")
 
 const score = document.querySelector(".score")
+const maxScore = document.querySelector(".maxScore")
 
 const newElement = document.createElement("audio");
 const newElement2 = document.createElement("audio");
-
 
 var contador = 0
 var code = ""
 var con = 1
 var setscore = 0
+maxScore.innerHTML = localStorage.getItem("score")
 
 function sleep(time)
 {
@@ -107,7 +108,7 @@ async function game3 () {
        
 
     }
-        await sleep(800)
+        await sleep(750)
         count3.innerHTML = i;
         if (i == 0){
             count2.innerHTML = "The game start in:"}
@@ -130,6 +131,10 @@ async function game3 () {
     } else {main[2].classList.replace("inactive", "active");score.innerHTML = setscore;
     newElement.setAttribute("src", "pin3.mp3")
     newElement.setAttribute("autoplay", "")
+    if (parseInt(localStorage.getItem("score")) < setscore || localStorage.getItem("score") === null){
+        localStorage.setItem("score", setscore.toString())
+        maxScore.innerHTML = localStorage.getItem("score")
+    }else { maxScore.innerHTML = localStorage.getItem("score")}
    
    
 }
@@ -148,6 +153,8 @@ loose.addEventListener("click", ()=>{
     code = ""
     con = 1
 })
+
+
 
 
 
